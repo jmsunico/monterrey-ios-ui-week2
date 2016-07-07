@@ -58,10 +58,10 @@ public enum Ingredientes : String{
 }
 
 public struct Pedido{
-	var queso : Quesos
-	var masa : Masas
-	var tamaño : Tamaños
-	var ingredientes : [Ingredientes]
+	public var queso : Quesos
+	public var masa : Masas
+	public var tamaño : Tamaños
+	public var ingredientes : [Ingredientes]
 	public init(){
 		self.tamaño = Tamaños()
 		self.masa = Masas()
