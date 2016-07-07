@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FA40AD5E1D22D6CC0009E7F4"
+               BlueprintIdentifier = "FAB7E7B41D2EA81500980F77"
                BuildableName = "pizzas.app"
                BlueprintName = "pizzas"
                ReferencedContainer = "container:pizzas.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FA40AD5E1D22D6CC0009E7F4"
+            BlueprintIdentifier = "FAB7E7B41D2EA81500980F77"
             BuildableName = "pizzas.app"
             BlueprintName = "pizzas"
             ReferencedContainer = "container:pizzas.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FA40AD5E1D22D6CC0009E7F4"
+            BlueprintIdentifier = "FAB7E7B41D2EA81500980F77"
             BuildableName = "pizzas.app"
             BlueprintName = "pizzas"
             ReferencedContainer = "container:pizzas.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FA40AD5E1D22D6CC0009E7F4"
+            BlueprintIdentifier = "FAB7E7B41D2EA81500980F77"
             BuildableName = "pizzas.app"
             BlueprintName = "pizzas"
             ReferencedContainer = "container:pizzas.xcodeproj">
