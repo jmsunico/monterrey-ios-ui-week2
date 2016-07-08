@@ -32,7 +32,7 @@ class OrderConfirmation: UIViewController {
 			confMessage = confMessage + pedidoActual[3][i] + " "
 		}
 		print(confMessage)
-		pizzaOrder.text = String(confMessage)
+		pizzaOrder.text = confMessage
 	}
 	
 	override func viewDidAppear(animated: Bool) {

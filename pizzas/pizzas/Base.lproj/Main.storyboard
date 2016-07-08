@@ -17,36 +17,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bienvenidos a PizzaOnline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kZ-UO-yTi">
-                                <rect key="frame" x="200" y="71" width="200" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenidos a PizzaOnline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kZ-UO-yTi">
+                                <rect key="frame" x="200" y="40" width="200" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSP-Fh-n7c">
-                                <rect key="frame" x="235" y="550" width="131" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSP-Fh-n7c">
+                                <rect key="frame" x="235" y="506" width="131" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="131" id="68l-y2-6qG"/>
+                                </constraints>
                                 <state key="normal" title="¿Quiere una Pizza?"/>
                                 <connections>
                                     <segue destination="533-Ue-DD6" kind="show" id="8Cf-vN-cBo"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2By-fe-Hlm">
-                                <rect key="frame" x="180" y="100" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2By-fe-Hlm">
+                                <rect key="frame" x="180" y="77" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="bTZ-Q4-KRt"/>
+                                    <constraint firstAttribute="height" constant="128" id="bsw-nT-EyA"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Últimos pedidos recibidos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXC-fS-whu">
-                                <rect key="frame" x="201" y="236" width="199" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7uH-rQ-3ZQ">
-                                <rect key="frame" x="180" y="265" width="240" height="128"/>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="7uH-rQ-3ZQ">
+                                <rect key="frame" x="180" y="246" width="240" height="251.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Últimos pedidos recibidos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXC-fS-whu">
+                                <rect key="frame" x="200" y="215" width="199" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UXC-fS-whu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9jP-rY-O8r"/>
+                            <constraint firstItem="7uH-rQ-3ZQ" firstAttribute="top" secondItem="UXC-fS-whu" secondAttribute="bottom" constant="10" id="CMI-as-rEc"/>
+                            <constraint firstItem="jSP-Fh-n7c" firstAttribute="centerX" secondItem="7uH-rQ-3ZQ" secondAttribute="centerX" id="Ei0-y2-Pc2"/>
+                            <constraint firstItem="2By-fe-Hlm" firstAttribute="top" secondItem="9kZ-UO-yTi" secondAttribute="bottom" constant="17" id="Etd-NP-BB9"/>
+                            <constraint firstItem="UXC-fS-whu" firstAttribute="top" secondItem="2By-fe-Hlm" secondAttribute="bottom" constant="10" id="Xgl-Ct-gJZ"/>
+                            <constraint firstItem="9kZ-UO-yTi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="ahi-aT-cRn"/>
+                            <constraint firstItem="jSP-Fh-n7c" firstAttribute="top" secondItem="7uH-rQ-3ZQ" secondAttribute="bottom" priority="100" constant="8" id="fnW-6J-TYL"/>
+                            <constraint firstItem="9kZ-UO-yTi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hwx-Em-Net"/>
+                            <constraint firstItem="2By-fe-Hlm" firstAttribute="leading" secondItem="7uH-rQ-3ZQ" secondAttribute="leading" id="kZZ-Gd-tUy"/>
+                            <constraint firstItem="7uH-rQ-3ZQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mMB-xa-k9x"/>
+                            <constraint firstItem="2By-fe-Hlm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nJ5-1Y-fFz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jSP-Fh-n7c" secondAttribute="bottom" constant="20" id="wGY-l4-RlW"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="a8K-u7-3ew"/>
                     <connections>
@@ -70,31 +91,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JVu-yY-j34">
-                                <rect key="frame" x="180" y="240" width="240" height="120"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleccione el TAMAÑO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxT-ip-bFM">
+                                <rect key="frame" x="212" y="40" width="177" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="JVu-yY-j34">
+                                <rect key="frame" x="180" y="198" width="240" height="216"/>
                                 <connections>
                                     <outlet property="dataSource" destination="533-Ue-DD6" id="uhB-7L-iOt"/>
                                     <outlet property="delegate" destination="533-Ue-DD6" id="zcg-gi-zkF"/>
                                 </connections>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbu-Ep-r80">
-                                <rect key="frame" x="176" y="562" width="249" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbu-Ep-r80">
+                                <rect key="frame" x="175" y="506" width="249" height="30"/>
                                 <state key="normal" title="Pulse aquí para seleccionar la MASA"/>
                                 <connections>
                                     <segue destination="1A9-3O-feX" kind="show" id="iLS-n2-BAV"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lBD-HM-fec">
-                                <rect key="frame" x="180" y="112" width="240" height="120"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lBD-HM-fec">
+                                <rect key="frame" x="180" y="68" width="240" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="fxd-3D-ErT"/>
+                                    <constraint firstAttribute="width" constant="240" id="sPr-QN-QMv"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seleccione el TAMAÑO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxT-ip-bFM">
-                                <rect key="frame" x="212" y="83" width="177" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lBD-HM-fec" firstAttribute="top" secondItem="fxT-ip-bFM" secondAttribute="bottom" constant="8" id="1Po-8A-vql"/>
+                            <constraint firstItem="fxT-ip-bFM" firstAttribute="top" secondItem="ybV-t7-bL1" secondAttribute="bottom" constant="20" id="5e4-ai-BD7"/>
+                            <constraint firstItem="avV-rU-aIY" firstAttribute="top" secondItem="Sbu-Ep-r80" secondAttribute="bottom" constant="20" id="6tr-wE-fac"/>
+                            <constraint firstItem="JVu-yY-j34" firstAttribute="top" secondItem="lBD-HM-fec" secondAttribute="bottom" constant="10" id="TnH-uK-7sS"/>
+                            <constraint firstItem="lBD-HM-fec" firstAttribute="leading" secondItem="JVu-yY-j34" secondAttribute="leading" id="XMi-DG-j8v"/>
+                            <constraint firstItem="Sbu-Ep-r80" firstAttribute="top" secondItem="JVu-yY-j34" secondAttribute="bottom" priority="100" constant="42" id="Y71-hM-b3Q"/>
+                            <constraint firstItem="JVu-yY-j34" firstAttribute="centerX" secondItem="KZE-Nl-7Zd" secondAttribute="centerX" id="Zfv-4G-qIZ"/>
+                            <constraint firstItem="lBD-HM-fec" firstAttribute="centerX" secondItem="KZE-Nl-7Zd" secondAttribute="centerX" id="cEI-Ps-11o"/>
+                            <constraint firstItem="Sbu-Ep-r80" firstAttribute="centerX" secondItem="KZE-Nl-7Zd" secondAttribute="centerX" id="iSK-QH-bRj"/>
+                            <constraint firstItem="fxT-ip-bFM" firstAttribute="centerX" secondItem="KZE-Nl-7Zd" secondAttribute="centerX" id="u0P-aY-pUW"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="pizzaSize" destination="lBD-HM-fec" id="exJ-Li-oJl"/>
@@ -117,31 +154,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13w-yq-XYu">
-                                <rect key="frame" x="195" y="368" width="229" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13w-yq-XYu">
+                                <rect key="frame" x="195" y="506" width="229" height="30"/>
                                 <state key="normal" title="Añada el queso de su elección -&gt;"/>
                                 <connections>
                                     <segue destination="INa-8k-67v" kind="show" id="qbY-g6-wHX"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MT8-a6-yuK">
-                                <rect key="frame" x="189" y="240" width="240" height="120"/>
+                            <pickerView contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="MT8-a6-yuK">
+                                <rect key="frame" x="189" y="200" width="240" height="216"/>
                                 <connections>
                                     <outlet property="dataSource" destination="1A9-3O-feX" id="zxF-OS-TQs"/>
                                     <outlet property="delegate" destination="1A9-3O-feX" id="QHw-oH-2Jh"/>
                                 </connections>
                             </pickerView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IVk-lS-EwH">
-                                <rect key="frame" x="189" y="112" width="240" height="120"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seleccione la MASA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUi-Mq-Dbe">
-                                <rect key="frame" x="233" y="83" width="153" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleccione la MASA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUi-Mq-Dbe">
+                                <rect key="frame" x="223" y="40" width="153" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IVk-lS-EwH">
+                                <rect key="frame" x="189" y="70" width="240" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="4eF-dZ-Fqt"/>
+                                    <constraint firstAttribute="height" constant="120" id="dlk-yD-9eU"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="13w-yq-XYu" firstAttribute="centerX" secondItem="b7m-n6-DxA" secondAttribute="centerX" constant="9.5" id="2D9-0b-uZ6"/>
+                            <constraint firstItem="IVk-lS-EwH" firstAttribute="top" secondItem="GUi-Mq-Dbe" secondAttribute="bottom" constant="10" id="5yL-PX-hyl"/>
+                            <constraint firstItem="GUi-Mq-Dbe" firstAttribute="top" secondItem="Ssg-GJ-oLX" secondAttribute="bottom" constant="20" id="7Qw-x7-yUj"/>
+                            <constraint firstItem="WvU-6T-5YT" firstAttribute="top" secondItem="13w-yq-XYu" secondAttribute="bottom" constant="20" id="8x0-Fo-kLr"/>
+                            <constraint firstItem="13w-yq-XYu" firstAttribute="top" secondItem="MT8-a6-yuK" secondAttribute="bottom" priority="100" constant="10" id="K9k-wI-tpX"/>
+                            <constraint firstItem="GUi-Mq-Dbe" firstAttribute="centerX" secondItem="b7m-n6-DxA" secondAttribute="centerX" id="LHc-Z5-GYL"/>
+                            <constraint firstItem="MT8-a6-yuK" firstAttribute="centerX" secondItem="b7m-n6-DxA" secondAttribute="centerX" constant="9" id="RJi-9u-Cp6"/>
+                            <constraint firstItem="MT8-a6-yuK" firstAttribute="top" secondItem="IVk-lS-EwH" secondAttribute="bottom" constant="10" id="Ziw-z9-E0J"/>
+                            <constraint firstItem="IVk-lS-EwH" firstAttribute="leading" secondItem="MT8-a6-yuK" secondAttribute="leading" id="hB7-Ez-hv2"/>
+                            <constraint firstItem="IVk-lS-EwH" firstAttribute="centerX" secondItem="b7m-n6-DxA" secondAttribute="centerX" constant="9" id="lSY-21-nDJ"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="massPicker" destination="MT8-a6-yuK" id="X5P-JF-ZxU"/>
@@ -164,31 +217,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBv-g8-93Z">
-                                <rect key="frame" x="140" y="368" width="320" height="30"/>
-                                <state key="normal" title="Seleccione hasta 3 ingredientes adicionales -&gt;"/>
-                                <connections>
-                                    <segue destination="cfW-Kr-CwC" kind="show" id="K3W-rb-anW"/>
-                                </connections>
-                            </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OOe-59-XKL">
-                                <rect key="frame" x="180" y="240" width="240" height="120"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleccione el tipo de QUESO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBb-Tf-jBh">
+                                <rect key="frame" x="190" y="40" width="221" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="OOe-59-XKL">
+                                <rect key="frame" x="180" y="208" width="240" height="216"/>
                                 <connections>
                                     <outlet property="dataSource" destination="INa-8k-67v" id="AGf-0i-UZh"/>
                                     <outlet property="delegate" destination="INa-8k-67v" id="wMg-ya-xsl"/>
                                 </connections>
                             </pickerView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="df8-3R-3Zc">
-                                <rect key="frame" x="180" y="104" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="df8-3R-3Zc">
+                                <rect key="frame" x="180" y="70" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="L7S-uW-3r7"/>
+                                    <constraint firstAttribute="width" constant="240" id="ouf-n1-VCQ"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seleccione el tipo de QUESO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBb-Tf-jBh">
-                                <rect key="frame" x="190" y="75" width="221" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBv-g8-93Z">
+                                <rect key="frame" x="140" y="550" width="320" height="30"/>
+                                <state key="normal" title="Seleccione hasta 3 ingredientes adicionales -&gt;"/>
+                                <connections>
+                                    <segue destination="cfW-Kr-CwC" kind="show" id="K3W-rb-anW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OOe-59-XKL" firstAttribute="top" secondItem="df8-3R-3Zc" secondAttribute="bottom" constant="10" id="0aB-zG-6k9"/>
+                            <constraint firstItem="df8-3R-3Zc" firstAttribute="centerX" secondItem="hWU-5D-Pay" secondAttribute="centerX" id="4Lq-hw-x1T"/>
+                            <constraint firstItem="DBv-g8-93Z" firstAttribute="centerX" secondItem="hWU-5D-Pay" secondAttribute="centerX" id="5tx-Iw-hpd"/>
+                            <constraint firstItem="DBv-g8-93Z" firstAttribute="top" secondItem="OOe-59-XKL" secondAttribute="bottom" priority="100" constant="10" id="Cjr-jT-8MX"/>
+                            <constraint firstItem="df8-3R-3Zc" firstAttribute="top" secondItem="uBb-Tf-jBh" secondAttribute="bottom" constant="10" id="FZW-le-jXq"/>
+                            <constraint firstItem="uBb-Tf-jBh" firstAttribute="top" secondItem="GXO-5X-Lrv" secondAttribute="bottom" constant="20" id="Kzb-sI-chR"/>
+                            <constraint firstItem="uBb-Tf-jBh" firstAttribute="centerX" secondItem="hWU-5D-Pay" secondAttribute="centerX" id="SZf-SZ-d6n"/>
+                            <constraint firstItem="OOe-59-XKL" firstAttribute="centerX" secondItem="hWU-5D-Pay" secondAttribute="centerX" id="VtC-p4-P0j"/>
+                            <constraint firstItem="df8-3R-3Zc" firstAttribute="leading" secondItem="OOe-59-XKL" secondAttribute="leading" id="weq-2R-DlO"/>
+                            <constraint firstItem="Mct-xQ-GRX" firstAttribute="top" secondItem="DBv-g8-93Z" secondAttribute="bottom" constant="20" id="zCd-iM-AZa"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="cheesePicker" destination="OOe-59-XKL" id="KbV-CK-WXZ"/>
@@ -211,31 +280,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMY-0m-Cki">
-                                <rect key="frame" x="140" y="368" width="320" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMY-0m-Cki">
+                                <rect key="frame" x="140" y="550" width="320" height="30"/>
                                 <state key="normal" title="Pulse aquí para confirmar y realizar su PEDIDO"/>
                                 <connections>
                                     <segue destination="Qqh-MQ-gcB" kind="show" id="YtI-oT-imi"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FJk-Kx-3Op">
-                                <rect key="frame" x="180" y="240" width="240" height="120"/>
+                            <pickerView contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="FJk-Kx-3Op">
+                                <rect key="frame" x="180" y="208" width="240" height="216"/>
                                 <connections>
                                     <outlet property="dataSource" destination="cfW-Kr-CwC" id="J5K-RP-n2w"/>
                                     <outlet property="delegate" destination="cfW-Kr-CwC" id="SUt-5P-8S2"/>
                                 </connections>
                             </pickerView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Zb-06-e5z">
-                                <rect key="frame" x="180" y="104" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Zb-06-e5z">
+                                <rect key="frame" x="180" y="70" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="3AW-F0-wIX"/>
+                                    <constraint firstAttribute="width" constant="240" id="THM-hP-DRK"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seleccione 3 INGREDIENTES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueq-JM-mJD">
-                                <rect key="frame" x="180" y="70" width="240" height="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleccione 3 INGREDIENTES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueq-JM-mJD">
+                                <rect key="frame" x="180" y="40" width="240" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Zb-06-e5z" firstAttribute="top" secondItem="ueq-JM-mJD" secondAttribute="bottom" constant="10" id="1SQ-Rj-4qI"/>
+                            <constraint firstItem="FJk-Kx-3Op" firstAttribute="centerX" secondItem="6Pi-MX-M2U" secondAttribute="centerX" id="6xC-1Y-UGX"/>
+                            <constraint firstItem="0Zb-06-e5z" firstAttribute="leading" secondItem="ueq-JM-mJD" secondAttribute="leading" id="882-Er-SCi"/>
+                            <constraint firstItem="xSA-of-6UT" firstAttribute="top" secondItem="aMY-0m-Cki" secondAttribute="bottom" constant="20" id="JpG-3u-PZo"/>
+                            <constraint firstItem="aMY-0m-Cki" firstAttribute="top" secondItem="FJk-Kx-3Op" secondAttribute="bottom" priority="100" constant="10" id="KrB-Pa-SjF"/>
+                            <constraint firstItem="ueq-JM-mJD" firstAttribute="centerX" secondItem="6Pi-MX-M2U" secondAttribute="centerX" id="VkI-TU-KPL"/>
+                            <constraint firstItem="0Zb-06-e5z" firstAttribute="centerX" secondItem="6Pi-MX-M2U" secondAttribute="centerX" id="WQR-5H-5kV"/>
+                            <constraint firstItem="aMY-0m-Cki" firstAttribute="centerX" secondItem="6Pi-MX-M2U" secondAttribute="centerX" id="jW7-5m-vDV"/>
+                            <constraint firstItem="ueq-JM-mJD" firstAttribute="top" secondItem="FEa-AT-TjY" secondAttribute="bottom" constant="20" id="rVH-eu-TvO"/>
+                            <constraint firstItem="FJk-Kx-3Op" firstAttribute="top" secondItem="0Zb-06-e5z" secondAttribute="bottom" constant="10" id="uEp-JX-OUm"/>
+                            <constraint firstItem="0Zb-06-e5z" firstAttribute="leading" secondItem="FJk-Kx-3Op" secondAttribute="leading" id="wsv-df-sZb"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="ingredPicker" destination="FJk-Kx-3Op" id="Ghk-63-8yn"/>
@@ -258,32 +344,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pud-k7-XGi">
-                                <rect key="frame" x="189" y="75" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pud-k7-XGi">
+                                <rect key="frame" x="180" y="61" width="240" height="151"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="151" id="a4m-QF-7pN"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnK-ZF-zTo">
-                                <rect key="frame" x="247" y="368" width="142" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnK-ZF-zTo">
+                                <rect key="frame" x="238" y="506" width="142" height="30"/>
                                 <state key="normal" title="PEDIR ESTA PIZZA!!!"/>
                                 <connections>
                                     <action selector="processOrder:" destination="Qqh-MQ-gcB" eventType="touchDown" id="RvN-us-1cw"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="ooq-9w-ZAZ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CONFIRME su pedido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Nz-rJ-P2m">
-                                <rect key="frame" x="227" y="211" width="165" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sólo un paso más..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSO-yW-PUa">
+                                <rect key="frame" x="234" y="30" width="149" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tBp-HP-CBL">
-                                <rect key="frame" x="189" y="236" width="240" height="128"/>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="tBp-HP-CBL">
+                                <rect key="frame" x="180" y="253" width="240" height="243"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="lgE-Cz-R5d"/>
+                                </constraints>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONFIRME su pedido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Nz-rJ-P2m">
+                                <rect key="frame" x="218" y="222" width="165" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pud-k7-XGi" firstAttribute="centerX" secondItem="HQh-yj-an3" secondAttribute="centerX" id="GYZ-ii-p4E"/>
+                            <constraint firstItem="3Nz-rJ-P2m" firstAttribute="centerX" secondItem="HQh-yj-an3" secondAttribute="centerX" constant="0.5" id="I7T-xn-lC3"/>
+                            <constraint firstItem="XnK-ZF-zTo" firstAttribute="centerX" secondItem="HQh-yj-an3" secondAttribute="centerX" constant="9" id="KWw-dR-zFB"/>
+                            <constraint firstItem="tBp-HP-CBL" firstAttribute="leading" secondItem="pud-k7-XGi" secondAttribute="leading" id="Kr0-xI-Ttc"/>
+                            <constraint firstItem="XnK-ZF-zTo" firstAttribute="top" secondItem="tBp-HP-CBL" secondAttribute="bottom" priority="100" constant="10" id="VOE-sl-Xtk"/>
+                            <constraint firstItem="nSO-yW-PUa" firstAttribute="centerX" secondItem="HQh-yj-an3" secondAttribute="centerX" constant="8.5" id="Zhu-JW-7bg"/>
+                            <constraint firstItem="nSO-yW-PUa" firstAttribute="top" secondItem="QFN-5s-GGZ" secondAttribute="bottom" constant="10" id="aYB-B9-zJg"/>
+                            <constraint firstItem="3Nz-rJ-P2m" firstAttribute="top" secondItem="pud-k7-XGi" secondAttribute="bottom" constant="10" id="dwA-iu-flI"/>
+                            <constraint firstItem="9BH-B7-Gny" firstAttribute="top" secondItem="XnK-ZF-zTo" secondAttribute="bottom" constant="20" id="ise-DQ-yyF"/>
+                            <constraint firstItem="tBp-HP-CBL" firstAttribute="top" secondItem="3Nz-rJ-P2m" secondAttribute="bottom" constant="10" id="m8N-AM-kgM"/>
+                            <constraint firstItem="pud-k7-XGi" firstAttribute="top" secondItem="nSO-yW-PUa" secondAttribute="bottom" constant="10" id="nMr-J0-OPM"/>
+                            <constraint firstItem="tBp-HP-CBL" firstAttribute="trailing" secondItem="pud-k7-XGi" secondAttribute="trailing" id="u4j-XP-3Qc"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
