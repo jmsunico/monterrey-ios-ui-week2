@@ -13,11 +13,13 @@ class Selection_1: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
 	var pedidoActual : [Array<String>] = []
 	var Tamaños = [["Pequeña", "Mediana", "Grande"]]
 
+	@IBOutlet weak var pizzaSize: UIImageView!
 	@IBOutlet weak var sizePicker: UIPickerView!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+		self.pizzaSize.image = UIImage(named: "pizzaSizes")
 		sizePicker.delegate = self
 		sizePicker.dataSource = self
 		sizePicker.selectRow(0, inComponent: 0, animated: false)

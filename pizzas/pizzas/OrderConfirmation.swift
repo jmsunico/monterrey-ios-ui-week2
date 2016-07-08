@@ -11,19 +11,17 @@ import UIKit
 class OrderConfirmation: UIViewController {
 	var pedidoActual : [[String]] = [[]]
 	
-	@IBOutlet weak var pizzaToOrder: UILabel!
-	
+	@IBOutlet weak var pizzaInBox: UIImageView!
+	@IBOutlet weak var pizzaOrder: UITextView!
 	@IBAction func processOrder(sender: UIButton) {
-		
-	}
-
-	@IBAction func changeOrder(sender: UIButton) {
 		
 	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
+		self.pizzaInBox.image = UIImage(named: "pizzaBox")
+
 		var confMessage = ""
 		confMessage = confMessage + "PIZZA ELEGIDA.-\n"
 		confMessage = confMessage + "\nTamaño:\t" + pedidoActual[0][0]
@@ -34,7 +32,7 @@ class OrderConfirmation: UIViewController {
 			confMessage = confMessage + pedidoActual[3][i] + " "
 		}
 		print(confMessage)
-		pizzaToOrder.text = String(confMessage)
+		pizzaOrder.text = String(confMessage)
 	}
 	
 	override func viewDidAppear(animated: Bool) {

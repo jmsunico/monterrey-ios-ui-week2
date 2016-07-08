@@ -13,9 +13,12 @@ class Selection_2: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
 	var Masas   = [["Fina", "Gruesa", "Crujiente"]]
 	@IBOutlet weak var massPicker: UIPickerView!
 	
+	@IBOutlet weak var pizzaMass: UIImageView!
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
+		self.pizzaMass.image = UIImage(named: "pizzaMasses")
+
 		massPicker.delegate = self
 		massPicker.dataSource = self
 		massPicker.selectRow(0, inComponent: 0, animated: false)

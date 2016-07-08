@@ -12,12 +12,26 @@ var  logPedidos : [Array<Array<String>>] = []
 
 class ViewController: UIViewController {
 	
+	@IBOutlet weak var ordersLog: UITextView!
+	@IBOutlet weak var pizzaImage: UIImageView!
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
-		print("Pantalla principal: Hemos hecho los siguientes pedidos:")
+		self.pizzaImage.image = UIImage(named: "pizzaTypes")
+
+		var aux = ""
+		print(logPedidos)
+		ordersLog.text = ""
 		for i in 0..<logPedidos.count{
-			print(i, logPedidos[i])
+			var log = logPedidos[i]
+			aux = String(i) + " -> Pizza " + log[0][0]
+			aux = aux + ", masa " + log[1][0]
+			aux = aux + ", queso " + log[2][0]
+			for j in 0..<log[3].count{
+				aux = aux + ", " + log[3][j]
+			}
+			aux = aux + "\n"
+			ordersLog.text = ordersLog.text.stringByAppendingString(aux)
 		}
 	}
 	

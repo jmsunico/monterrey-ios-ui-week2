@@ -15,10 +15,13 @@ class Selection_4: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
 		["Anchoas", "Atún", "Champiñón", "Jamón","Pepperoni", "Pimiento", "Piña", "Pollo", "Salmón", "Tomate"],
 		["Anchoas", "Atún", "Champiñón", "Jamón","Pepperoni", "Pimiento", "Piña", "Pollo", "Salmón", "Tomate"]]
 	@IBOutlet weak var ingredPicker: UIPickerView!
+	@IBOutlet weak var pizzaIngredients: UIImageView!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
+		self.pizzaIngredients.image = UIImage(named: "pizzaIngredients")
+
 		ingredPicker.delegate = self
 		ingredPicker.dataSource = self
 		ingredPicker.selectRow(0, inComponent: 0, animated: false)

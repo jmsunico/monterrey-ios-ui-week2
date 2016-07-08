@@ -13,6 +13,7 @@ class Selection_3: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
 	var Quesos = [["Mozarella", "Cheddar", "Parmesano", "Sin queso"]]
 	@IBOutlet weak var cheesePicker: UIPickerView!
 	
+	@IBOutlet weak var pizzaCheese: UIImageView!
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
@@ -20,6 +21,8 @@ class Selection_3: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
 	
 	override func viewDidAppear(animated: Bool) {
 		// Do any additional step after the view appears.
+		self.pizzaCheese.image = UIImage(named: "pizzaCheeses")
+
 		cheesePicker.delegate = self
 		cheesePicker.dataSource = self
 		cheesePicker.selectRow(0, inComponent: 0, animated: false)
