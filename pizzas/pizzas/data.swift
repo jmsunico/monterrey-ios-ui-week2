@@ -68,7 +68,4 @@ public struct Pedido{
 		self.queso = Quesos()
 		self.ingredientes = [Ingredientes()]
 	}
-	public func getMembers() -> [String]{
-		return ["M1", "M2"]
-	}
 }

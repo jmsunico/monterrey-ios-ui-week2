@@ -13,7 +13,7 @@ public enum Quesos : String{
 	init() {
 		self = .NA
 	}
-	func getMembers() -> [String]{
+	public func getMembers() -> [String]{
 		return ["Q1", "Q2"]
 	}
 }
@@ -28,7 +28,7 @@ public enum Masas : String{
 		self = .NA
 	}
 	
-	func getMembers() -> [String]{
+	public func getMembers() -> [String]{
 		return ["M1", "M2"]
 	}
 }
@@ -40,7 +40,7 @@ public enum Tamaños : String{
 	init() {
 		self = .NA
 	}
-	func getMembers() -> [String]{
+	public func getMembers() -> [String]{
 		return ["T1", "T2"]
 	}
 }
@@ -52,23 +52,20 @@ public enum Ingredientes : String{
 	init() {
 		self = .NA
 	}
-	func getMembers() -> [String]{
+	public func getMembers() -> [String]{
 		return ["I1", "I2"]
 	}
 }
 
 public struct Pedido{
-	public var queso : Quesos
-	public var masa : Masas
 	public var tamaño : Tamaños
+	public var masa : Masas
+	public var queso : Quesos
 	public var ingredientes : [Ingredientes]
 	public init(){
 		self.tamaño = Tamaños()
 		self.masa = Masas()
 		self.queso = Quesos()
 		self.ingredientes = [Ingredientes()]
-	}
-	public func getMembers() -> [String]{
-		return ["M1", "M2"]
 	}
 }

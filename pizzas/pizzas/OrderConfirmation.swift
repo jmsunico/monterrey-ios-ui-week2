@@ -9,27 +9,34 @@
 import UIKit
 
 class OrderConfirmation: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+	var pedidoActual : Pedido?
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		// Do any additional setup after loading the view.
+		print("Confirmation: pedidoActual=", pedidoActual)
+	}
+	
+	override func viewDidAppear(animated: Bool) {
+		// Do any additional step after the view.
+	}
+	
+	// Preparation before navigation
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		// Get the new view controller using segue.destinationViewController.
+		
+		if sender?.name == ""{
+			let selection1 = segue.destinationViewController as! Selection_1
+			// Pass the selected object to the new view controller.
+			selection1.pedidoActual = self.pedidoActual
+		} else{
+			logPedidos.append(pedidoActual!)
+		}
+	}
+	
+	
+	override func didReceiveMemoryWarning() {
+		super.didReceiveMemoryWarning()
+		// Dispose of any resources that can be recreated.
+	}
 }

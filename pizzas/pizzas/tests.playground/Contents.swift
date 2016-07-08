@@ -17,3 +17,5 @@ print ("-")
 for i in pedido.ingredientes{
 	print(i)
 }
+
+pedido.tamaño.getMembers()

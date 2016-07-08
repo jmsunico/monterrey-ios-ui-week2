@@ -18,14 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pantalla Principal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kZ-UO-yTi">
-                                <rect key="frame" x="190" y="289" width="131" height="21"/>
+                                <rect key="frame" x="235" y="20" width="131" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSP-Fh-n7c">
-                                <rect key="frame" x="204" y="360" width="103" height="30"/>
-                                <state key="normal" title="Ir a Selección 1"/>
+                                <rect key="frame" x="235" y="550" width="131" height="30"/>
+                                <state key="normal" title="¿Quiere una Pizza?"/>
                                 <connections>
                                     <segue destination="533-Ue-DD6" kind="show" id="8Cf-vN-cBo"/>
                                 </connections>
@@ -37,12 +37,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1117" y="357"/>
+            <point key="canvasLocation" x="1009" y="357"/>
         </scene>
-        <!--View Controller-->
+        <!--Selection1-->
         <scene sceneID="i06-RW-5o6">
             <objects>
-                <viewController id="533-Ue-DD6" sceneMemberID="viewController">
+                <viewController id="533-Ue-DD6" customClass="Selection_1" customModule="pizzas" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ybV-t7-bL1"/>
                         <viewControllerLayoutGuide type="bottom" id="avV-rU-aIY"/>
@@ -51,19 +51,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbu-Ep-r80">
-                                <rect key="frame" x="248" y="332" width="105" height="30"/>
-                                <state key="normal" title="Ir a Selección 2"/>
-                                <connections>
-                                    <segue destination="1A9-3O-feX" kind="show" id="iLS-n2-BAV"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selección 1: TAMAÑO (Grande, Mediana, Pequeña)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxT-ip-bFM">
-                                <rect key="frame" x="107" y="79" width="388" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seleccione el TAMAÑO de su PIZZA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxT-ip-bFM">
+                                <rect key="frame" x="163" y="20" width="275" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JVu-yY-j34">
+                                <rect key="frame" x="0.0" y="192" width="600" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sbu-Ep-r80">
+                                <rect key="frame" x="176" y="562" width="249" height="30"/>
+                                <state key="normal" title="Pulse aquí para seleccionar la MASA"/>
+                                <connections>
+                                    <segue destination="1A9-3O-feX" kind="show" id="iLS-n2-BAV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -72,10 +75,10 @@
             </objects>
             <point key="canvasLocation" x="1737" y="357"/>
         </scene>
-        <!--View Controller-->
+        <!--Selection2-->
         <scene sceneID="WJz-ER-p5q">
             <objects>
-                <viewController id="1A9-3O-feX" sceneMemberID="viewController">
+                <viewController id="1A9-3O-feX" customClass="Selection_2" customModule="pizzas" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ssg-GJ-oLX"/>
                         <viewControllerLayoutGuide type="bottom" id="WvU-6T-5YT"/>
@@ -85,14 +88,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13w-yq-XYu">
-                                <rect key="frame" x="239" y="258" width="105" height="30"/>
-                                <state key="normal" title="Ir a Selección 3"/>
+                                <rect key="frame" x="140" y="562" width="321" height="30"/>
+                                <state key="normal" title="Pulse aquí para seleccionar los INGREDIENTES"/>
                                 <connections>
                                     <segue destination="INa-8k-67v" kind="show" id="qbY-g6-wHX"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selección 2: MASA (Crujiente, Delgada, Gruesa)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUi-Mq-Dbe">
-                                <rect key="frame" x="117" y="72" width="366" height="21"/>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MT8-a6-yuK">
+                                <rect key="frame" x="0.0" y="192" width="600" height="216"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seleccione su tipo de MASA de pizza preferida" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUi-Mq-Dbe">
+                                <rect key="frame" x="131" y="20" width="357" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -105,10 +111,10 @@
             </objects>
             <point key="canvasLocation" x="2373" y="357"/>
         </scene>
-        <!--View Controller-->
+        <!--Selection3-->
         <scene sceneID="ZKv-cv-Hx7">
             <objects>
-                <viewController id="INa-8k-67v" sceneMemberID="viewController">
+                <viewController id="INa-8k-67v" customClass="Selection_3" customModule="pizzas" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GXO-5X-Lrv"/>
                         <viewControllerLayoutGuide type="bottom" id="Mct-xQ-GRX"/>
@@ -118,33 +124,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBv-g8-93Z">
-                                <rect key="frame" x="225" y="257" width="106" height="30"/>
-                                <state key="normal" title="Ir a Selección 4"/>
+                                <rect key="frame" x="112" y="550" width="376" height="30"/>
+                                <state key="normal" title="Pulse aquí para seleccionar el resto de los ingredientes"/>
                                 <connections>
                                     <segue destination="cfW-Kr-CwC" kind="show" id="K3W-rb-anW"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBb-Tf-jBh">
-                                <rect key="frame" x="28" y="72" width="493" height="21"/>
-                                <string key="text">Selección 3: QUESO (Mozarella, Cheddar, Parmesano, Sin queso
-
-Seleccionar de uno a cinco ingredientes: jamón, pepperoni, pavo, salchicha, aceituna, cebolla, pimiento, piña, anchoa, etc.)</string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Empecemos por el tipo de QUESO que prefiere..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBb-Tf-jBh">
+                                <rect key="frame" x="114" y="20" width="373" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OOe-59-XKL">
+                                <rect key="frame" x="0.0" y="192" width="600" height="216"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w3p-l5-u1y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3007" y="368"/>
+            <point key="canvasLocation" x="3005" y="357"/>
         </scene>
-        <!--View Controller-->
+        <!--Selection4-->
         <scene sceneID="4gy-zN-zPX">
             <objects>
-                <viewController id="cfW-Kr-CwC" sceneMemberID="viewController">
+                <viewController id="cfW-Kr-CwC" customClass="Selection_4" customModule="pizzas" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FEa-AT-TjY"/>
                         <viewControllerLayoutGuide type="bottom" id="xSA-of-6UT"/>
@@ -153,21 +159,15 @@ Seleccionar de uno a cinco ingredientes: jamón, pepperoni, pavo, salchicha, ace
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selección 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBF-LV-Xpi">
-                                <rect key="frame" x="273" y="211" width="122" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMY-0m-Cki">
-                                <rect key="frame" x="268" y="240" width="117" height="30"/>
-                                <state key="normal" title="Ir a Confirmación"/>
+                                <rect key="frame" x="140" y="550" width="320" height="30"/>
+                                <state key="normal" title="Pulse aquí para confirmar y realizar su PEDIDO"/>
                                 <connections>
                                     <segue destination="Qqh-MQ-gcB" kind="show" id="YtI-oT-imi"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selección 3 - OTROS INGREDIENTES: jamón, pepperoni, pavo, salchicha, aceituna, cebolla, pimiento, piña, anchoa, etc.)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueq-JM-mJD">
-                                <rect key="frame" x="165" y="72" width="343" height="79"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Para finalizar, seleccione el resto de ingredientes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueq-JM-mJD">
+                                <rect key="frame" x="114" y="20" width="372" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -180,10 +180,10 @@ Seleccionar de uno a cinco ingredientes: jamón, pepperoni, pavo, salchicha, ace
             </objects>
             <point key="canvasLocation" x="3626" y="367"/>
         </scene>
-        <!--View Controller-->
+        <!--Order Confirmation-->
         <scene sceneID="C34-TU-oxE">
             <objects>
-                <viewController id="Qqh-MQ-gcB" sceneMemberID="viewController">
+                <viewController id="Qqh-MQ-gcB" customClass="OrderConfirmation" customModule="pizzas" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QFN-5s-GGZ"/>
                         <viewControllerLayoutGuide type="bottom" id="9BH-B7-Gny"/>
@@ -192,21 +192,8 @@ Seleccionar de uno a cinco ingredientes: jamón, pepperoni, pavo, salchicha, ace
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnK-ZF-zTo">
-                                <rect key="frame" x="249" y="532" width="102" height="30"/>
-                                <state key="normal" title="PEDIR PIZZA!!!"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="ooq-9w-ZAZ"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descripción de la pizza configurada:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhH-Na-kep">
                                 <rect key="frame" x="20" y="134" width="556" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Etapa de Confirmación" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Nz-rJ-P2m">
-                                <rect key="frame" x="220" y="72" width="174" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -217,13 +204,32 @@ Seleccionar de uno a cinco ingredientes: jamón, pepperoni, pavo, salchicha, ace
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Confirme su Pedido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Nz-rJ-P2m">
+                                <rect key="frame" x="243" y="20" width="151" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15P-hw-t2X">
+                                <rect key="frame" x="153" y="398" width="124" height="30"/>
+                                <state key="normal" title="¿Cambiar Pedido?"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnK-ZF-zTo">
+                                <rect key="frame" x="405" y="398" width="102" height="30"/>
+                                <state key="normal" title="PEDIR PIZZA!!!"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="ooq-9w-ZAZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wzt-5P-NoU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4264" y="364"/>
+            <point key="canvasLocation" x="4357" y="367"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HPG-Ll-Gqj">

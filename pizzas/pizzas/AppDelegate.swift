@@ -5,6 +5,7 @@
 //  Created by José-María Súnico on 20160707.
 //  Copyright © 2016 José-María Súnico. All rights reserved.
 //
+// SELECTION_1 TAMAÑO
 
 import UIKit
 
