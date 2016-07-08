@@ -9,18 +9,23 @@
 
 import UIKit
 
-class Selection_1: UIViewController {
-	var pedidoActual : Pedido?
+class Selection_1: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+	var pedidoActual : [Array<String>] = []
+	var Tamaños = [["Pequeña", "Mediana", "Grande"]]
+
+	@IBOutlet weak var sizePicker: UIPickerView!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-		print("Selection1: pedidoActual=", self.pedidoActual)
+		sizePicker.delegate = self
+		sizePicker.dataSource = self
+		sizePicker.selectRow(0, inComponent: 0, animated: false)
+		pedidoActual[0] = [Tamaños[0][0]]
     }
 	
 	override func viewDidAppear(animated: Bool) {
 		// Do any additional step after the view appears.
-		pedidoActual!.tamaño = .T1
 	}
 	
 	
@@ -39,37 +44,22 @@ class Selection_1: UIViewController {
     }
 	
 	func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-		return 1
+		return Tamaños.count
 	}
 	
 	func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-		
-		return pedidoActual!.tamaño.getMembers().count
+		return Tamaños[component].count
 	}
 	
 	func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-		
-		return pedidoActual!.tamaño.getMembers()[row]
+		return Tamaños[component][row]
 	}
-	
-	func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
-		
-		let pickerLabel = UILabel()
-		
-		pickerLabel.textColor = UIColor.blackColor()
-		pickerLabel.text = pedidoActual!.tamaño.getMembers()[row]
-		pickerLabel.font = UIFont(name: "Verdana", size: 13)
-		pickerLabel.textAlignment = NSTextAlignment.Center
-		
-		
-		
-		
-		
-		return pickerLabel
-	}
-	
 	
 	func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-		//prepareForSegue(Selection_2, sender: UIPickerView) // XXXXXX sender???
+		var aux : [String] = []
+		for i in 0..<Tamaños.count{
+			aux.append(Tamaños[i][sizePicker.selectedRowInComponent(i)])
+		}
+		pedidoActual[0] = aux
 	}
 }

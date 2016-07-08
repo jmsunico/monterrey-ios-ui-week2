@@ -9,12 +9,32 @@
 import UIKit
 
 class OrderConfirmation: UIViewController {
-	var pedidoActual : Pedido?
+	var pedidoActual : [[String]] = [[]]
+	
+	@IBOutlet weak var pizzaToOrder: UILabel!
+	
+	@IBAction func processOrder(sender: UIButton) {
+		
+	}
+
+	@IBAction func changeOrder(sender: UIButton) {
+		
+	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
-		print("Confirmation: pedidoActual=", pedidoActual)
+		var confMessage = ""
+		confMessage = confMessage + "PIZZA ELEGIDA.-\n"
+		confMessage = confMessage + "\nTamaño:\t" + pedidoActual[0][0]
+		confMessage = confMessage + "\nMasa:\t" + pedidoActual[1][0]
+		confMessage = confMessage + "\nQueso:\t" + pedidoActual[2][0]
+		confMessage = confMessage + "\nOtros ingredientes:\t"
+		for i in 0..<pedidoActual[3].count{
+			confMessage = confMessage + pedidoActual[3][i] + " "
+		}
+		print(confMessage)
+		pizzaToOrder.text = String(confMessage)
 	}
 	
 	override func viewDidAppear(animated: Bool) {
@@ -30,10 +50,9 @@ class OrderConfirmation: UIViewController {
 			// Pass the selected object to the new view controller.
 			selection1.pedidoActual = self.pedidoActual
 		} else{
-			logPedidos.append(pedidoActual!)
+			logPedidos.append(pedidoActual)
 		}
 	}
-	
 	
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()

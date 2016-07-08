@@ -8,18 +8,22 @@
 
 import UIKit
 
-class Selection_2: UIViewController {
-	var pedidoActual : Pedido?
-
+class Selection_2: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+	var pedidoActual : [Array<String>] = []
+	var Masas   = [["Fina", "Gruesa", "Crujiente"]]
+	@IBOutlet weak var massPicker: UIPickerView!
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
-		print("Selection2: pedidoActual=", self.pedidoActual)
+		massPicker.delegate = self
+		massPicker.dataSource = self
+		massPicker.selectRow(0, inComponent: 0, animated: false)
+		pedidoActual[1] = [Masas[0][0]]
 	}
 	
 	override func viewDidAppear(animated: Bool) {
 		// Do any additional step after the view appears.
-		pedidoActual!.masa = .M1
 	}
 	
 	// Preparation before navigation
@@ -30,10 +34,34 @@ class Selection_2: UIViewController {
 		// Pass the selected object to the new view controller.
 		selection3.pedidoActual = self.pedidoActual
 	}
-	
-	
+
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
+	
+	
+	func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+		return Masas.count
+	}
+	
+	func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+		return Masas[component].count
+	}
+	
+	func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+		return Masas[component][row]
+	}
+	
+	func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+		var aux : [String] = []
+		for i in 0..<Masas.count{
+			aux.append(Masas[i][massPicker.selectedRowInComponent(i)])
+		}
+		pedidoActual[1] = aux
+	}
+	
+	
+	
+	
 }

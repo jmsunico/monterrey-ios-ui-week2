@@ -12,7 +12,6 @@
 		FA823A1C1D2EB04700574A4F /* Selection-3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA823A1B1D2EB04700574A4F /* Selection-3.swift */; };
 		FA823A1E1D2EB05E00574A4F /* Selection-4.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA823A1D1D2EB05E00574A4F /* Selection-4.swift */; };
 		FA823A201D2EB07E00574A4F /* OrderConfirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA823A1F1D2EB07E00574A4F /* OrderConfirmation.swift */; };
-		FA823A231D2EC00E00574A4F /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA823A221D2EC00E00574A4F /* data.swift */; };
 		FAB7E7B91D2EA81500980F77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB7E7B81D2EA81500980F77 /* AppDelegate.swift */; };
 		FAB7E7BB1D2EA81500980F77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB7E7BA1D2EA81500980F77 /* ViewController.swift */; };
 		FAB7E7BE1D2EA81500980F77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB7E7BC1D2EA81500980F77 /* Main.storyboard */; };
@@ -25,8 +24,6 @@
 		FA823A1B1D2EB04700574A4F /* Selection-3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Selection-3.swift"; sourceTree = "<group>"; };
 		FA823A1D1D2EB05E00574A4F /* Selection-4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Selection-4.swift"; sourceTree = "<group>"; };
 		FA823A1F1D2EB07E00574A4F /* OrderConfirmation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderConfirmation.swift; sourceTree = "<group>"; };
-		FA823A211D2EBFF300574A4F /* tests.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = tests.playground; sourceTree = "<group>"; };
-		FA823A221D2EC00E00574A4F /* data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
 		FAB7E7B51D2EA81500980F77 /* pizzas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pizzas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB7E7B81D2EA81500980F77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAB7E7BA1D2EA81500980F77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,8 +72,6 @@
 				FA823A1B1D2EB04700574A4F /* Selection-3.swift */,
 				FA823A1D1D2EB05E00574A4F /* Selection-4.swift */,
 				FA823A1F1D2EB07E00574A4F /* OrderConfirmation.swift */,
-				FA823A211D2EBFF300574A4F /* tests.playground */,
-				FA823A221D2EC00E00574A4F /* data.swift */,
 			);
 			path = pizzas;
 			sourceTree = "<group>";
@@ -158,7 +153,6 @@
 				FA823A1C1D2EB04700574A4F /* Selection-3.swift in Sources */,
 				FA823A1E1D2EB05E00574A4F /* Selection-4.swift in Sources */,
 				FA823A201D2EB07E00574A4F /* OrderConfirmation.swift in Sources */,
-				FA823A231D2EC00E00574A4F /* data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,18 +8,16 @@
 
 import UIKit
 
-var  logPedidos : [Pedido] = []
+var  logPedidos : [Array<Array<String>>] = []
 
 class ViewController: UIViewController {
-	
-	var nuevoPedido = Pedido()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
 		print("Pantalla principal: Hemos hecho los siguientes pedidos:")
 		for i in 0..<logPedidos.count{
-			print(i, String(logPedidos))
+			print(i, logPedidos[i])
 		}
 	}
 	
@@ -33,7 +31,7 @@ class ViewController: UIViewController {
 		let selection1 = segue.destinationViewController as! Selection_1
 		
 		// Pass the selected object to the new view controller.
-		selection1.pedidoActual = nuevoPedido
+		selection1.pedidoActual = [[""], [""], [""], [""]]
 	}
 	
 	override func didReceiveMemoryWarning() {
